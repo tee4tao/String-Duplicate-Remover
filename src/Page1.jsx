@@ -32,8 +32,8 @@ const Page1 = () => {
     }
   }, [userInput]);
   return (
-    <main className="h-screen grid place-items-center">
-      <section className="w-2/4">
+    <main className="h-screen grid place-items-center w-full">
+      <section className="w-2/4 md:w-2/4 lg:w-1/3">
         <form
           action=""
           className="flex flex-col items-center hover:bg-Dark-nude rounded-lg shadow-lg ease-linear duration-300 hover:shadow-2xl p-4 w-full"
