@@ -31,6 +31,12 @@ const Page2 = () => {
     };
     let numberOfElement = count(inputArr, e.currentTarget.textContent);
     console.log(numberOfElement);
+    if (numberOfElement > 1) {
+      const unique = inputArr.filter(
+        (items) => items !== e.currentTarget.textContent
+      );
+      setInputArr(unique);
+    }
   };
   useEffect(() => {
     const loadedInput = localStorage.getItem("userInput")
