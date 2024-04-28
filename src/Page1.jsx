@@ -8,12 +8,9 @@ const Page1 = () => {
   const navigateTo = useNavigate();
   const onInputChange = (e) => {
     const { value } = e.target;
-    // console.log("Input value: ", value);
-
-    const re = /^[A-Za-z]+$/;
+    const re = /^[A-Za-z]+$/; // to make sure the input accepts only alphabet
     if (value === "" || re.test(value)) {
       setUserInput(value);
-      // console.log(value);
     }
   };
   const handleSubmit = (e) => {
@@ -28,7 +25,7 @@ const Page1 = () => {
   };
   useEffect(() => {
     if (userInput != ``) {
-      localStorage.setItem(`userInput`, userInput);
+      localStorage.setItem(`userInput`, userInput); //to store the input to the local storage
     }
   }, [userInput]);
   return (
@@ -44,7 +41,7 @@ const Page1 = () => {
             value={userInput}
             // onChange={(e) => setUserInput(e.target.value)}
             onChange={onInputChange}
-            placeholder="Your name"
+            placeholder="Input your string"
             className="border-2 border-black h-14 rounded-md p-2 text-xl ease-linear duration-300 w-full"
           />
           <button

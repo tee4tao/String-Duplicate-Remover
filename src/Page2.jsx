@@ -4,6 +4,9 @@ const Page2 = () => {
   const [test, setTest] = useState(`hiiiid`);
   const [isLoading, setIsLoading] = useState(true);
   const [inputArr, setInputArr] = useState();
+  const loadedInput = localStorage.getItem("userInput")
+    ? localStorage.getItem("userInput")
+    : []; // To get the items saved in the local storage
   const handleClick = (e) => {
     // console.log(e.currentTarget.textContent);
     // const unique = inputArr.filter(
@@ -53,6 +56,20 @@ const Page2 = () => {
   }
   return (
     <main className="min-h-screen w-screen grid place-items-center">
+      <section className="w-full grid place-items-center">
+        <div className="header-container p-2 flex flex-col justify-center items-center bg-Dark-nude rounded-md shadow-lg">
+          <div className="original-string">
+            <span className="font-bold text-2xl">Original String: </span>
+            <span className="text-2xl uppercase">{loadedInput.toString()}</span>
+          </div>
+          {loadedInput.toString() !== inputArr.join("") && (
+            <div className="adjusted-string">
+              <span className="font-bold text-2xl">Adjusted String: </span>
+              <span className="text-2xl uppercase">{inputArr.join("")}</span>
+            </div>
+          )}
+        </div>
+      </section>
       {/* {console.log(inputArr)} */}
       <section className="grid place-items-center grid-cols-2 lg:grid-cols-3 gap-4 ease-linear duration-300">
         {inputArr.map((item, index) => {
