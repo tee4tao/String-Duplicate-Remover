@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Page2 = () => {
   const [test, setTest] = useState(`hiiiid`);
@@ -30,9 +31,13 @@ const Page2 = () => {
   if (isLoading) {
     return <div className="loader"></div>;
   }
-  // if (inputArr.length === 3) {
-  //   alert(`all duplicate removed`);
-  // }
+  const duplicates = inputArr.filter(
+    (item, index) => inputArr.indexOf(item) !== index
+  );
+  console.log(duplicates);
+  if (duplicates.length === 0) {
+    alert(`all duplicate removed`);
+  }
   return (
     <main className="min-h-screen w-screen grid place-items-center">
       <section className="w-full grid place-items-center">
@@ -63,6 +68,12 @@ const Page2 = () => {
           );
         })}
       </section>
+      <Link
+        to={"/page1"}
+        className="border-2 w-2/4 bg-Dark-nude hover:text-Dark-nude hover:bg-white h-8 rounded-md p-2 text-xl flex items-center justify-center mt-4 ease-linear duration-300 text-white"
+      >
+        Previous
+      </Link>
     </main>
   );
 };
