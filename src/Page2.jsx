@@ -38,7 +38,16 @@ const Page2 = () => {
       const unique = inputArr.filter(
         (items) => items !== e.currentTarget.textContent
       );
-      setInputArr(unique);
+      // setInputArr(unique);
+
+      //////new test
+      let testArr = Array(numberOfElement).fill(e.currentTarget.textContent);
+      console.log(testArr);
+      const duplicates = testArr.filter(
+        (item, index) => testArr.indexOf(item) !== index
+      );
+      console.log(duplicates);
+      setInputArr(unique.concat(duplicates));
     }
   };
   useEffect(() => {
