@@ -43,11 +43,15 @@ const Page2 = () => {
       //////new test
       let testArr = Array(numberOfElement).fill(e.currentTarget.textContent);
       console.log(testArr);
-      const duplicates = testArr.filter(
-        (item, index) => testArr.indexOf(item) !== index
-      );
-      console.log(duplicates);
-      setInputArr(unique.concat(duplicates));
+      // const duplicates = testArr.filter(
+      //   (item, index) => testArr.indexOf(item) !== index
+      // );
+      // console.log(duplicates);
+      // setInputArr(unique.concat(duplicates));
+      /////////////////////////
+      const uniqueElements = (arr) => [...new Set(arr)];
+      setInputArr(unique.concat(uniqueElements(testArr)));
+      // console.log(uniqueElements(testArr));
     }
   };
   useEffect(() => {
@@ -58,6 +62,7 @@ const Page2 = () => {
     if (Arr) {
       setInputArr(Arr);
       setIsLoading(false);
+      // localStorage.setItem(`userInput`, inputArr); //to store the input to the local storage
     }
   }, []);
   if (isLoading) {
