@@ -22,5 +22,5 @@ This is an app where users enters a string value and can remove individual dupli
 - ReactJS
 - CSS
 - Tailwind CSS
-  -HTML
-  React Router V6.22.3
+- HTML
+- React Router V6.22.3
