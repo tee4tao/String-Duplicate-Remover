@@ -29,3 +29,9 @@ This is an app where users enters a string value and can remove individual dupli
 ## Screenshots
 
 ![Home Page](</src/Images/Screenshot(42).png>)
+
+![Duplicate Remover Page](</src/Images/Screenshot(43).png>)
+
+![Duplicate Remover Page](</src/Images/Screenshot(44).png>)
+
+![The Third Page](</src/Images/Screenshot(45).png>)
