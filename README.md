@@ -28,4 +28,4 @@ This is an app where users enters a string value and can remove individual dupli
 
 ## Screenshots
 
-![Home Page](</src/Images/Screenshots(42).png>)
+![Home Page](</src/Images/Screenshot(42).png>)
