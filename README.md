@@ -16,6 +16,7 @@ This is an app where users enters a string value and can remove individual dupli
 - On the remover page, the original string and the adjusted string are displayed.
 - When all the duplicates have been removed, users will recieve an alert saying "all duplicates removed".
 - There is a "previous button" that allows users to navigate back to the home page.
+- A third page that displays all the string ever inputted on the page.
 
 ## Technologies Used
 
@@ -24,3 +25,7 @@ This is an app where users enters a string value and can remove individual dupli
 - Tailwind CSS
 - HTML
 - React Router V6.22.3
+
+## Screenshots
+
+![Home Page](/src/images/Screenshots (42).png)
