@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Page2 = () => {
-  const [test, setTest] = useState(`hiiiid`);
   const [isLoading, setIsLoading] = useState(true);
   const [inputArr, setInputArr] = useState();
   const loadedInput = localStorage.getItem("userInput")
@@ -25,7 +24,6 @@ const Page2 = () => {
     if (Arr) {
       setInputArr(Arr);
       setIsLoading(false);
-      // localStorage.setItem(`userInput`, inputArr); //to store the input to the local storage
     }
   }, []);
   if (isLoading) {
@@ -34,7 +32,6 @@ const Page2 = () => {
   const duplicates = inputArr.filter(
     (item, index) => inputArr.indexOf(item) !== index
   );
-  console.log(duplicates);
   if (duplicates.length === 0) {
     alert(`all duplicate removed`);
   }
@@ -68,12 +65,20 @@ const Page2 = () => {
           );
         })}
       </section>
-      <Link
-        to={"/page1"}
-        className="border-2 w-2/4 bg-Dark-nude hover:text-Dark-nude hover:bg-white h-8 rounded-md p-2 text-xl flex items-center justify-center mt-4 ease-linear duration-300 text-white"
-      >
-        Previous
-      </Link>
+      <div className="btn-container space-x-20 flex justify-center items-center">
+        <Link
+          to={"/page1"}
+          className="border-2 bg-Dark-nude hover:text-Dark-nude hover:bg-white h-8 rounded-md p-2 w-auto text-xl flex items-center justify-center mt-4 ease-linear duration-300 text-white"
+        >
+          Previous Page
+        </Link>
+        <Link
+          to={"/page3"}
+          className="border-2 bg-Dark-nude hover:text-Dark-nude hover:bg-white h-8 rounded-md p-2 text-xl flex items-center justify-center mt-4 ease-linear duration-300 text-white"
+        >
+          Next Page
+        </Link>
+      </div>
     </main>
   );
 };

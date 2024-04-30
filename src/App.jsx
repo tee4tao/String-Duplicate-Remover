@@ -3,6 +3,7 @@ import Page1 from "./Page1";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Page2 from "./Page2";
 import Error from "./Error";
+import Page3 from "./Page3";
 function App() {
   const [count, setCount] = useState(0);
   const router = createBrowserRouter([
@@ -19,6 +20,10 @@ function App() {
         {
           path: `page2`,
           element: <Page2 />,
+        },
+        {
+          path: `page3`,
+          element: <Page3 />,
         },
       ],
     },
